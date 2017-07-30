@@ -1,1 +1,1 @@
-window.ENV.apiUrl = 'https://api.compressor.wei.technology/';
+window.ENV.apiUrl = 'https://compressor-api.wei.technology/';
