@@ -95,7 +95,7 @@
       {{/if}}
       <div class="col-md-6 col-md-pull-6">
         <button type="button" class="btn btn-primary" {{action "createGist"}}>Create Anonymous Gist</button>
-        {{#if gistUrl}}<a {{bind-attr href=gistUrl}}>{{gistUrl}}</a>{{/if}}
+        {{#if gistUrl}}<a {{bind-attr href=gistUrl target="_blank"}}>{{gistUrl}}</a>{{/if}}
       </div>
     </div>
   {{/unless}}

@@ -5,7 +5,7 @@
   "main": "api/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddhhz/compressor.git"
+    "url": "git@github.com:ddhhz/compressor.git"
   },
   "engines": {
     "node": "6.0.0",

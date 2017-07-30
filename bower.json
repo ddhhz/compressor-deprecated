@@ -1,8 +1,13 @@
 {
-  "name": "refresh-sf",
+  "name": "compressor",
+  "description": "Minify, obfuscate, concatenate, and gzip JavaScript and CSS.",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ddhhz/compressor.git"
+  },
   "authors": [
-    "Mike Horn <gpbmike@gmail.com>"
+    "Wei He <github@weispot.com>"
   ],
   "license": "MIT",
   "private": true,
