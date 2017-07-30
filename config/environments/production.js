@@ -1,1 +1,1 @@
-window.ENV.apiUrl = 'https://refresh-sf.herokuapp.com/';
+window.ENV.apiUrl = 'https://api.compressor.wei.technology/';

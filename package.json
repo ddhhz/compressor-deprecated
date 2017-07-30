@@ -1,16 +1,21 @@
 {
-  "name": "refresh-sf",
+  "name": "compressor",
   "version": "0.0.0",
   "description": "Minify, obfuscate, concatenate, and gzip JavaScript and CSS.",
   "main": "api/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddhhz/compressor.git"
+  },
   "engines": {
-    "node": "0.10.x"
+    "node": "6.0.0",
+    "npm": "5.3.0"
   },
   "scripts": {
     "start": "node api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Wei He <github@weispot.com>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.10.2",
