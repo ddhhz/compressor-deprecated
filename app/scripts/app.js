@@ -42,26 +42,15 @@
     language: null,
     languages: ['javascript', 'css', 'html'],
 
-    useYui: localStorage.getItem('useYui'),
-
     compressOptions: Ember.Object.create({
       javascript : window.uglifyOptions,
       css        : window.cleancssOptions,
-      html       : window.htmlminifierOptions,
-      yui        : window.yuiOptions
+      html       : window.htmlminifierOptions
     }),
 
     htmlDisabled: function () {
-      return this.get('isCompressing') || this.get('useYui');
-    }.property('isCompressing', 'useYui'),
-
-    rememberYui: function () {
-      if (this.get('useYui')) {
-        localStorage.setItem('useYui', true);
-      } else {
-        localStorage.removeItem('useYui');
-      }
-    }.observes('useYui'),
+      return this.get('isCompressing');
+    }.property('isCompressing'),
 
     isHtml: function () {
       return this.get('language') === 'html';
@@ -167,7 +156,7 @@
         controller.set('isStalled', true);
       }, 5000);
 
-      var minifier = this.get('useYui') && language !== 'html' ? 'yui' : language;
+      var minifier = language;
 
       var options = this.get('compressOptions').get(minifier).get('options').serialize();
 
@@ -192,8 +181,6 @@
             reject('There is a 1MB input limit to reduce strain on my free Heroku instance.');
           } else if (!jqXHR.responseJSON) {
             reject('Unhandled error. :( ' + error);
-          } else if (jqXHR.responseJSON.yuiError) {
-            reject(jqXHR.responseJSON.yuiError);
           } else {
             reject(JSON.stringify(jqXHR.responseJSON, null, 2));
           }

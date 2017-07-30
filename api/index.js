@@ -4,7 +4,6 @@ var compression  = require('compression');
 var bodyParser   = require('body-parser');
 var UglifyJS     = require('uglify-js');
 var CleanCSS     = require('clean-css');
-var YUI          = require('yuicompressor');
 var HTMLMinifier = require('html-minifier');
 var errorhandler = require('errorhandler');
 var zlib         = require('zlib');
@@ -167,56 +166,6 @@ api.post('/html/', function (req, res) {
   } catch (error) {
     res.status(500).json('HTML Minify does not report any useful errors, but there was an error. :(');
   }
-
-});
-
-api.post('/yui/', function (req, res) {
-
-  if (!req.body.code) {
-    res.status(500).json('No code. :(').end();
-    return;
-  }
-
-  var options = {
-    type: req.body.type === 'javascript' ? 'js' : 'css'
-  };
-
-  Object.keys(req.body.options).forEach(function (key) {
-
-    var value = req.body.options[key];
-
-    if (!value) {
-      return;
-    }
-
-    switch (key) {
-      case 'verbose':
-      case 'nomunge':
-      case 'preserve-semi':
-      case 'disable-optimizations':
-        if (value === 'true') {
-          options[key] = true;
-        }
-        break;
-      case 'line-break':
-        value = parseInt(value, 10);
-        if (value) {
-          options[key] = value;
-        }
-    }
-
-  });
-
-  YUI.compress(req.body.code, options, function(err, data, extra) {
-    //err   If compressor encounters an error, it's stderr will be here
-    //data  The compressed string, you write it out where you want it
-    //extra The stderr (warnings are printed here in case you want to echo them
-    if (err) {
-      res.status(500).json({ yuiError: err });
-    } else {
-      res.json({ code: data });
-    }
-  });
 
 });
 

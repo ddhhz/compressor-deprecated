@@ -25,8 +25,7 @@
     "express": "^4.11.1",
     "html-minifier": "^0.6.9",
     "morgan": "^1.5.1",
-    "uglify-js": "^2.4.16",
-    "yuicompressor": "^2.4.8"
+    "uglify-js": "^2.4.16"
   },
   "devDependencies": {
     "ember-template-compiler": "^1.6.1",

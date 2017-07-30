@@ -6,12 +6,6 @@ module.exports = {
         cwd: './app/',
         src: ['scripts/**/*'],
         dest: './dev/'
-      },
-      {
-        expand: true,
-        cwd: './app/yui/',
-        src: ['**/*'],
-        dest: './dev/yui/'
       }
     ]
   },
@@ -22,12 +16,6 @@ module.exports = {
         cwd: './app/',
         src: ['scripts/**/*'],
         dest: './tmp/'
-      },
-      {
-        expand: true,
-        cwd: './app/yui/',
-        src: ['**/*'],
-        dest: './dist/yui/'
       },
       {
         expand: true,
