@@ -340,3 +340,5 @@
   window.App = App;
 
 })();
+
+window.ga = function(){};
