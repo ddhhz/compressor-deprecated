@@ -43,6 +43,10 @@ api.use(bodyParser.urlencoded({
   limit: '1mb'
 }));
 
+api.get('/status', function (req, res) {
+  res.status(200).json({status: 'ok'});
+});
+
 api.post('/javascript/', function (req, res) {
 
   if (!req.body.code) {
