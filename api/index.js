@@ -43,6 +43,10 @@ api.use(bodyParser.urlencoded({
   limit: '1mb'
 }));
 
+api.get('/', function (req, res) {
+  res.redirect(301, 'https://compressor.wei.technology');
+});
+
 api.get('/status', function (req, res) {
   res.status(200).json({status: 'ok'});
 });
