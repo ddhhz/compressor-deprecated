@@ -44,7 +44,7 @@ api.use(bodyParser.urlencoded({
 }));
 
 api.get('/', function (req, res) {
-  res.redirect(301, 'https://compressor.wei.technology');
+  res.redirect(301, 'https://compressor.whe.technology');
 });
 
 api.get('/status', function (req, res) {

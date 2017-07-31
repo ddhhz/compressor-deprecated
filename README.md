@@ -1,7 +1,7 @@
 Online JavaScript/CSS/HTML Compressor
 ==========
 
-Visit: https://compressor.wei.technology
+Visit: https://compressor.whe.technology
 
 This is a web wrapper around UglifyJS, Clean-CSS and HTML Minifier.
 
