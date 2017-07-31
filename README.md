@@ -1,6 +1,16 @@
-refresh-sf
+Online JavaScript/CSS/HTML Compressor
 ==========
 
-Powers refresh-sf.com (at some inderterminate future time).
+Visit: https://compressor.wei.technology
 
-This is simply a UI wrapper in the form of a website for minification tools that already exist.
+This is a web wrapper around UglifyJS, Clean-CSS and HTML Minifier.
+
+
+## Author
+
+[**Wei He**](https://whe.me) _github@weispot.com_
+
+
+## Credits
+
+Fork of [Refresh-sf](https://github.com/gpbmike/refresh-sf)
